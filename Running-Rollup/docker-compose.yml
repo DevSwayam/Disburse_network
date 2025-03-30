@@ -14,14 +14,6 @@ services:
       - ./database:/home/user/.arbitrum
     depends_on:
       - validation_node
-    # ===== CloudWatch Configuration Start =====
-    logging:
-      driver: "awslogs"
-      options:
-        awslogs-region: "us-east-2" # Update to your EC2 instance's region
-        awslogs-group: "nitro-node-logs"
-        awslogs-stream: "nitro-node"
-    # ===== CloudWatch Configuration End =====
 
   validation_node:
     image: ghcr.io/espressosystems/nitro-espresso-integration/nitro-node:integration
@@ -32,11 +24,4 @@ services:
       - ./config:/config
     entrypoint: /usr/local/bin/nitro-val
     command: --conf.file /config/validation_node_config.json
-    # ===== CloudWatch Configuration Start =====
-    logging:
-      driver: "awslogs"
-      options:
-        awslogs-region: "us-east-2" # Update to your EC2 instance's region
-        awslogs-group: "validation-node-logs"
-        awslogs-stream: "validation-node"
-    # ===== CloudWatch Configuration End =====
+    
