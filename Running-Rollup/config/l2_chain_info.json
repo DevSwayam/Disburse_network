@@ -1,0 +1,53 @@
+[
+    {
+        "chain-name": "arb-dev-test",
+        "parent-chain-id": 421614,
+        "parent-chain-is-arbitrum": true,
+        "sequencer-url": "",
+        "secondary-forwarding-target": "",
+        "feed-url": "",
+        "secondary-feed-url": "",
+        "das-index-url": "",
+        "has-genesis-state": false,
+        "chain-config": {
+            "chainId": 28082002,
+            "homesteadBlock": 0,
+            "daoForkSupport": true,
+            "eip150Block": 0,
+            "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "eip155Block": 0,
+            "eip158Block": 0,
+            "byzantiumBlock": 0,
+            "constantinopleBlock": 0,
+            "petersburgBlock": 0,
+            "istanbulBlock": 0,
+            "muirGlacierBlock": 0,
+            "berlinBlock": 0,
+            "londonBlock": 0,
+            "clique": {
+                "period": 0,
+                "epoch": 0
+            },
+            "arbitrum": {
+                "EnableArbOS": true,
+                "AllowDebugPrecompiles": true,
+                "DataAvailabilityCommittee": false,
+                "InitialArbOSVersion": 32,
+                "InitialChainOwner": "0x1950498e95274Dc79Fbca238C2BE53684D69886F",
+                "GenesisBlockNum": 0
+            }
+        },
+        
+        "rollup": {
+            "bridge": "0x90bc6d7071F58E704eCefF7d9A59D6EE9A5a9f07",
+            "inbox": "0x643adBF892d094C5613B3506C3D9183e41f3680b",
+            "sequencer-inbox": "0x059A6724C981Baf94Aa00a72c13E20001EBBDB9D",
+            "deployed-at": 137491523,
+            "rollup": "0xA28a38c8cd8A30a857f2CE492ED1CbeB3E61Ae9c",
+            "native-token": "0x0000000000000000000000000000000000000000",
+            "upgrade-executor": "0xD99a4F3A05AB060A76F48E5888bAe098843975fd",
+            "validator-utils": "0xC9fd2A0aAfFF5856A04eA40E11B382A5CF8EC1d0",
+            "validator-wallet-creator": "0x85b928AFa373471e631E5e66304777A9478d117a"
+        }
+    }
+]
