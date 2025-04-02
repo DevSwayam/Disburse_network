@@ -178,12 +178,15 @@ Check the `solver-server` repo for logic and test cases.
 ## 🚀 Try It Live
 
 - App: 👉 [https://disburse.network](https://disburse.network)
+- Client Repo: 💻 [https://github.com/vwakesahu/hackathon-client](https://github.com/vwakesahu/hackathon-client)
 - Contracts: 📂 `contracts/`
 - Solver: 🧠 [Solver API](https://solver-server-sgre.vercel.app/solve)
+
 
 ## 📂 Folder Guide
 - `contracts/` → Solidity smart contracts
 - `solver-server/` → Express.js solver backend
+- [`hackathon-client`](https://github.com/vwakesahu/hackathon-client) → Next.js frontend (Disburse App)
 - `Nitro + Espresso Rollup config`
 
 
