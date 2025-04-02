@@ -22,7 +22,7 @@ You can:
 
 ## 🛠️ Architecture Overview
 
-![Architecture](assets/Architecture.png)
+<img width="1027" alt="Screenshot 2025-04-02 at 6 10 41 AM" src="https://github.com/user-attachments/assets/eab8d186-d95a-4eb5-86bd-28f20538c9b2" />
 
 ### 🧱 Flow Breakdown
 
@@ -48,6 +48,23 @@ You can:
 
 It leverages **Hyperlane** for message passing and secure cross-chain communication, and uses **HotShot** for high-speed finality.
 
+## 📊 Track Disbursement Activity
+
+We’ve successfully disbursed to over **10,000 users across multiple testnets** including Base, Arbitrum, Mantle, Polygon, and more.
+
+You can verify and explore recent payouts on each destination chain:
+
+| Chain               | Explorer Link |
+|---------------------|---------------|
+| Base Sepolia        | [View](https://sepolia.basescan.org/address/0xb21eB381e46db59B57E6A495B8BA790809F459AE#internaltx) |
+| Arbitrum Sepolia    | [View](https://sepolia.arbiscan.io/address/0x16ffBE3A6d8B54D7fd7CE83CF63fE7521B6c5Ee2#internaltx) |
+| Mantle Sepolia      | [View](https://explorer.sepolia.mantle.xyz/address/0x4AF371b2acF58f71c101a5736653b5e7431BEc47?tab=internal_txns) |
+| Polygon Amoy        | [View](https://amoy.polygonscan.com/address/0xF66182EB072fA7F2bf1a5542Bbc42fAFF85B42b5#internaltx) |
+| Scroll Sepolia      | [View](https://sepolia.scrollscan.com/address/0x7d94481934900bcf06185ad36e0da70396127594#internaltx) |
+| Ethereum Sepolia    | [View](https://sepolia.etherscan.io/address/0x34bE8237Da6CA79e3EFeB58aB8DC5dED20fb8E81#internaltx) |
+| Optimism Sepolia    | [View](https://sepolia-optimism.etherscan.io/address/0x9e3BAF1809dbf8D202A27f70DDb458862fC1fAd5#internaltx) |
+
+
 ---
 
 ## ✅ Rollup Liveness Verification
@@ -56,8 +73,13 @@ It leverages **Hyperlane** for message passing and secure cross-chain communicat
 [`0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965`](https://sepolia.arbiscan.io/tx/0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965)
 
 ![CreateRollup image](assets/CreateRollup.png)
+![image](https://github.com/user-attachments/assets/c69d9f40-979e-4d60-8752-44c2c060ace4)
 
 ---
+
+### EC2 Instance of Deployed Espresso Rollup
+![image](https://github.com/user-attachments/assets/c990559e-feff-44a8-a132-3904cf53419c)
+
 
 ### RPC Test Endpoint:
 
@@ -131,6 +153,9 @@ cast send $ANY_ADDRESS --value 1 \
 ## ✉️ Hyperlane Integration
 
 ### ✅ Deployed Contracts on Disburse Rollup
+
+### Multichain Hyperlane Relayer 
+![image](https://github.com/user-attachments/assets/eaa91463-edd0-47d9-9cc2-355debe07535)
 
 | Contract | Address |
 |---------|---------|
