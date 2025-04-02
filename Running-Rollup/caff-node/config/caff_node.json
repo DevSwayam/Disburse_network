@@ -1,7 +1,7 @@
 {
     "parent-chain": {},
     "chain": {
-        "id": 1000000,
+        "id": 28082002,
         "info-files": [
             "/config/l2_chain_info.json"
         ]
@@ -50,10 +50,10 @@
                 "hotshot-urls": [
                     "https://query.decaf.testnet.espresso.network/v0"
                 ],
-                "next-hotshot-block": 9999,
-                "namespace": 1000000,
-                "parent-chain-node-url": "WEBSOCKET_ARBITRUM_SEPOLIA_RPC_URL",
-                "sequencer-url": "http://nitro-node:8547",
+                "next-hotshot-block": 2634407,
+                "namespace": 28082002,
+                "parent-chain-node-url": "wss://arb-sepolia.g.alchemy.com/v2/huhywl3dBfFCQh3EJv-AYYeHP3zfORpE",
+                "sequencer-url": "http://35.94.203.84:8547",
                 "hotshot-polling-interval": "1ms",
                 "retry-time": "2s",
                 "parent-chain-reader": {

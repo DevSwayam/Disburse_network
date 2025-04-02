@@ -13,7 +13,7 @@
     "node": {
         "staker": {
             "parent-chain-wallet": {
-                "private-key": ""
+                "private-key": "a62cdcde68bb40918a8d67f347efc747b4977c3c04d789d1fae1ea127700795e"
             },
             "disable-challenge": false,
             "enable": true,
@@ -52,7 +52,7 @@
             "wait-for-max-delay": true,
             "resubmit-espresso-tx-deadline": "2m",
             "parent-chain-wallet": {
-                "private-key": ""
+                "private-key": "f9723f7d66ea296d0b1fa6708a7120dd2f0f0e726ccbba6d5bb72ddf45517138"
             },
             "max-delay": "1m"
         },
