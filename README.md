@@ -1,3 +1,45 @@
+# 🌀 Disburse Network – Hackathon Submission
+
+## 🚀 One-liner
+**Disburse is a one-click cross-chain payout network that enables mass payments across multiple chains from a single transaction.**
+
+---
+
+## 🔍 What We Built
+Disburse is a modular intent-based payments protocol that combines:
+- A custom Nitro-based Rollup (powered by Espresso)
+- Hyperlane for cross-chain messaging
+- A solver network for liquidity
+- An expressive MultiSender contract for native token disbursements
+
+You can:
+- Deposit funds on any supported chain
+- Submit an intent (distribution plan)
+- Have the solver verify, sign, and route payments
+- Seamlessly send payouts to multiple chains in one go
+
+---
+
+## 🛠️ Architecture Overview
+
+![Architecture](assets/Architecture.png)
+
+### 🧱 Flow Breakdown
+
+1. **User deposits ETH** on any supported chain (e.g., Base, Mantle, Arbitrum, etc.)
+2. They receive a `txHash` of their deposit transaction
+3. User submits an intent to the **Solver API** with distribution data
+4. Solver verifies deposit using on-chain logs from the source chain
+5. If valid, Solver signs the encoded distribution intent
+6. Solver sends `multiSend()` transaction on the **Disburse Rollup**
+7. MultiSender contract emits the data into **Hyperlane Mailbox**
+8. Hyperlane relayers send the data to destination chains
+9. **RemoteRecipients** on destination chains distribute funds immediately
+10. **Espresso confirms** the rollup transaction
+11. **Solver reclaims their liquidity after confirmation** 🧠
+
+---
+
 # Disburse Rollup powered by Espresso
 
 ## What is Disburse?
@@ -118,15 +160,40 @@ The Solver API validates cross-chain intent deposits and signs or submits transa
 
 🌐 [https://solver-server-sgre.vercel.app/solve](https://solver-server-sgre.vercel.app/solve)
 
-Check the [solver-server](https://github.com/your-org/solver-server) repo for logic and test cases.
+Check the `solver-server` repo for logic and test cases.
 
 ---
 
 ## 🚀 Try It Live
 
-Check out the app frontend:
-👉 [https://disburse.network](https://disburse.network)
+- App: 👉 [https://disburse.network](https://disburse.network)
+- Contracts: 📂 `contracts/`
+- Solver: 🧠 [Solver API](https://solver-server-sgre.vercel.app/solve)
 
-Explore the deployed contracts and relayers:
-📂 `contracts/` folder
+---
+
+## 📂 Folder Guide
+- `contracts/` → Solidity smart contracts
+- `solver-server/` → Express.js solver backend
+- `rollup/` → Nitro + Espresso Rollup config
+
+---
+
+## 🙌 Team & Credits
+- Rollup Deployment: Vivek
+- Contracts & Solver Infra: Swayam
+- Hyperlane Config: [Core Addresses above]
+- Design, Flow, and Coordination: Team Disburse ✨
+
+---
+
+## 🤝 Thanks
+Built with ❤️ using:
+- Espresso Systems
+- Hyperlane
+- Arbitrum Nitro
+- Foundry + Ethers.js
+- Vercel & Alchemy
+
+Let's make cross-chain disbursements programmable and seamless ⚡
 
