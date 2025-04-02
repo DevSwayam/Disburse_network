@@ -1,9 +1,7 @@
 # 🌀 Disburse Network – Hackathon Submission
 
 ## 🚀 One-liner
-**Disburse is a one-click cross-chain payout network that enables mass payments across multiple chains from a single transaction.**
-
----
+Disburse is a one-click cross-chain payout network that enables mass payments across multiple chains from a single transaction — made possible only through fast finality provided by Espresso's Nitro rollup architecture.
 
 ## 🔍 What We Built
 Disburse is a modular intent-based payments protocol that combines:
@@ -18,7 +16,6 @@ You can:
 - Have the solver verify, sign, and route payments
 - Seamlessly send payouts to multiple chains in one go
 
----
 
 ## 🛠️ Architecture Overview
 
@@ -38,13 +35,11 @@ You can:
 10. **Espresso confirms** the rollup transaction
 11. **Solver reclaims their liquidity after confirmation** 🧠
 
----
-
 # Disburse Rollup powered by Espresso
 
-## What is Disburse?
+Disburse is a one-click multi-chain payout protocol that enables developers, DAOs, and organizations to send funds to multiple chains from a single source chain. Powered by Nitro rollups via Espresso, Disburse ensures fast, efficient, and low-cost intent-based disbursements across chains.
 
-**Disburse** is a one-click multi-chain payout protocol that enables developers, DAOs, and organizations to send funds to multiple chains from a single source chain. Powered by Nitro rollups via **Espresso**, Disburse ensures fast, efficient, and low-cost intent-based disbursements across chains.
+It leverages Hyperlane for message passing and secure cross-chain communication, and uses HotShot for high-speed finality.
 
 It leverages **Hyperlane** for message passing and secure cross-chain communication, and uses **HotShot** for high-speed finality.
 
@@ -65,16 +60,12 @@ You can verify and explore recent payouts on each destination chain:
 | Optimism Sepolia    | [View](https://sepolia-optimism.etherscan.io/address/0x9e3BAF1809dbf8D202A27f70DDb458862fC1fAd5#internaltx) |
 
 
----
-
 ## ✅ Rollup Liveness Verification
 
 ### CreateRollup Transaction:
 [`0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965`](https://sepolia.arbiscan.io/tx/0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965)
 
 ![image](https://github.com/user-attachments/assets/c69d9f40-979e-4d60-8752-44c2c060ace4)
-
----
 
 ### EC2 Instance of Deployed Espresso Rollup
 ![image](https://github.com/user-attachments/assets/c990559e-feff-44a8-a132-3904cf53419c)
@@ -104,7 +95,6 @@ curl -X POST http://35.94.203.84:8547 \
 | **Native Token Name**    | Ether                        |
 | **Native Token Decimals**| 18                           |
 
----
 
 ## 🧪 Testing the Chain
 
@@ -115,7 +105,6 @@ cast call --rpc-url https://arbitrum-sepolia-rpc.publicnode.com \
   0xc9A884B4F5440fc00730A52ab48a8e0Db8b30784 "latestConfirmed()(uint256)"
 ```
 
----
 
 ### Send bridge deposit from L1:
 
@@ -125,9 +114,6 @@ cast send --rpc-url https://arbitrum-sepolia-rpc.publicnode.com \
   --private-key $YOUR_PRIVATE_KEY --value 10000000000 -vvvv
 ```
 
-> Bridging may take a few minutes to finalize.
-
----
 
 ### Check balances:
 
@@ -142,8 +128,6 @@ cast send $ANY_ADDRESS --value 1 \
   --private-key $YOUR_PRIVATE_KEY \
   --rpc-url http://35.94.203.84:8547
 ```
-
----
 
 ## ✉️ Hyperlane Integration
 
@@ -172,7 +156,6 @@ cast send $ANY_ADDRESS --value 1 \
 **ISM Relayer & Owner Address:**  
 `0x1950498e95274Dc79Fbca238C2BE53684D69886F`
 
----
 
 ## 🔁 Solver Server
 
@@ -182,7 +165,6 @@ The Solver API validates cross-chain intent deposits and signs or submits transa
 
 Check the `solver-server` repo for logic and test cases.
 
----
 
 ## 🚀 Try It Live
 
@@ -190,14 +172,11 @@ Check the `solver-server` repo for logic and test cases.
 - Contracts: 📂 `contracts/`
 - Solver: 🧠 [Solver API](https://solver-server-sgre.vercel.app/solve)
 
----
-
 ## 📂 Folder Guide
 - `contracts/` → Solidity smart contracts
 - `solver-server/` → Express.js solver backend
 - `rollup/` → Nitro + Espresso Rollup config
 
----
 
 ## 🙌 Team & Credits
 - Rollup Deployment: Vivek
@@ -205,7 +184,6 @@ Check the `solver-server` repo for logic and test cases.
 - Hyperlane Config: [Core Addresses above]
 - Design, Flow, and Coordination: Team Disburse ✨
 
----
 
 ## 🤝 Thanks
 Built with ❤️ using:
