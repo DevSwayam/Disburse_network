@@ -90,10 +90,6 @@ curl -X POST http://35.94.203.84:8547 \
 
 **Chain ID returned:** `0x1ac7f52` (decimal: `28082002`)
 
-![EC2 Logs](assets/EC2Logs.png)
-
----
-
 ## 🌐 Disburse Rollup Network Details
 
 | Parameter                 | Value                        |
