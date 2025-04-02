@@ -60,6 +60,15 @@ You can verify and explore recent payouts on each destination chain:
 | Optimism Sepolia    | [View](https://sepolia-optimism.etherscan.io/address/0x9e3BAF1809dbf8D202A27f70DDb458862fC1fAd5#internaltx) |
 
 
+## 🏆 Hackathon Track Submission
+
+We are applying to the **Caffeinate & Code** track under **all three challenges**:
+- ✅ Core Challenge — We deployed a fully functional Nitro rollup on Decaf integrated with Espresso HotShot for fast finality.
+- ✅ Build Something Real — Disburse is a real working product with a live frontend, contracts, solver infra, and users.
+
+We're also applying to **Cracking Composability → Best Composable App**  
+> Because Disburse natively leverages cross-chain intent resolution, message relaying, and token disbursement via Hyperlane + Espresso confirmations — making it one of the most composable payment infra apps built during the hackathon.
+
 ## ✅ Rollup Liveness Verification
 
 ### CreateRollup Transaction:
