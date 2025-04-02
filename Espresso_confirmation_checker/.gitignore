@@ -1,0 +1,16 @@
+# Binary
+*.exe
+
+# Go specific
+*.test
+*.out
+go.sum
+
+# IDE
+.idea/
+.vscode/
+
+go-ethereum
+
+# OS specific
+.DS_Store

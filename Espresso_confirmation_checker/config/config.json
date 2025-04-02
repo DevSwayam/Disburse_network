@@ -1,0 +1,6 @@
+{
+    "caff_node_url": "http://localhost:8550",
+    "polling_interval": 1,
+    "value": 0,
+    "from": "0xAF9fC206261DF20a7f2Be9B379B101FAFd983117"
+}
