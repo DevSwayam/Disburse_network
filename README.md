@@ -67,7 +67,7 @@ You can verify and explore recent payouts on each destination chain:
 
 ![image](https://github.com/user-attachments/assets/c69d9f40-979e-4d60-8752-44c2c060ace4)
 
-### EC2 Instance of Deployed Espresso Rollup
+### EC2 Instance Logs
 ![image](https://github.com/user-attachments/assets/c990559e-feff-44a8-a132-3904cf53419c)
 
 
