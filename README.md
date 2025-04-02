@@ -1,1 +1,132 @@
-# rollup
+# Disburse Rollup powered by Espresso
+
+## What is Disburse?
+
+**Disburse** is a one-click multi-chain payout protocol that enables developers, DAOs, and organizations to send funds to multiple chains from a single source chain. Powered by Nitro rollups via **Espresso**, Disburse ensures fast, efficient, and low-cost intent-based disbursements across chains.
+
+It leverages **Hyperlane** for message passing and secure cross-chain communication, and uses **HotShot** for high-speed finality.
+
+---
+
+## ✅ Rollup Liveness Verification
+
+### CreateRollup Transaction:
+[`0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965`](https://sepolia.arbiscan.io/tx/0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965)
+
+![CreateRollup image](assets/CreateRollup.png)
+
+---
+
+### RPC Test Endpoint:
+
+```bash
+curl -X POST http://35.94.203.84:8547 \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'
+```
+
+**Chain ID returned:** `0x1ac7f52` (decimal: `28082002`)
+
+![EC2 Logs](assets/EC2Logs.png)
+
+---
+
+## 🌐 Disburse Rollup Network Details
+
+| Parameter                 | Value                        |
+|---------------------------|------------------------------|
+| **Name**                 | disburse                     |
+| **Display Name**         | Disburse                     |
+| **Chain ID**             | 28082002                     |
+| **Domain ID**            | 28082002                     |
+| **Protocol**             | Ethereum                     |
+| **JSON RPC URL**         | `http://35.94.203.84:8547`   |
+| **Native Token Symbol**  | ETH                          |
+| **Native Token Name**    | Ether                        |
+| **Native Token Decimals**| 18                           |
+
+---
+
+## 🧪 Testing the Chain
+
+### Check confirmed node:
+
+```bash
+cast call --rpc-url https://arbitrum-sepolia-rpc.publicnode.com \
+  0xc9A884B4F5440fc00730A52ab48a8e0Db8b30784 "latestConfirmed()(uint256)"
+```
+
+---
+
+### Send bridge deposit from L1:
+
+```bash
+cast send --rpc-url https://arbitrum-sepolia-rpc.publicnode.com \
+  0x0EB750129705fAfec85B0b1BF17B3c8bA3504602 'depositEth()' \
+  --private-key $YOUR_PRIVATE_KEY --value 10000000000 -vvvv
+```
+
+> Bridging may take a few minutes to finalize.
+
+---
+
+### Check balances:
+
+```bash
+cast balance $YOUR_PUBLIC_ADDRESS --rpc-url http://35.94.203.84:8547
+```
+
+Or send test value:
+
+```bash
+cast send $ANY_ADDRESS --value 1 \
+  --private-key $YOUR_PRIVATE_KEY \
+  --rpc-url http://35.94.203.84:8547
+```
+
+---
+
+## ✉️ Hyperlane Integration
+
+### ✅ Deployed Contracts on Disburse Rollup
+
+| Contract | Address |
+|---------|---------|
+| **mailbox** | `0xeCcd8F6645d88F2ad3276ECdEc6afb3Cb6a1F6E0` |
+| **proxyAdmin** | `0x8cd8d7fC3fDB41CA1BeC7503FBAD4d959D851281` |
+| **merkleTreeHook** | `0xE34304275AD0922cbd06aa6C249d53090EA76F23` |
+| **interchainAccountRouter** | `0x4926abd06FF3364aCA761567f60421006aaae4cb` |
+| **interchainAccountIsm** | `0xaF238b2Fd5b5D6Ec325A6d86A6A21F8177D36FD6` |
+| **validatorAnnounce** | `0xa70fda5B181DA549576CEE02C5e3110A193149EA` |
+| **domainRoutingIsmFactory** | `0x88b06E1eC81c8916aB1A45cD61cD2A6969FF6858` |
+| **staticAggregationHookFactory** | `0x09E935e5Bbea49b75836D2097130B22D73831237` |
+| **staticAggregationIsmFactory** | `0x279D1F16b8b4953F35f9aE923a56E60464d1f220` |
+| **staticMerkleRootMultisigIsmFactory** | `0x38E9912C29265E447e809c54bf9726d2444bACf9` |
+| **staticMerkleRootWeightedMultisigIsmFactory** | `0x4a9D17814a82065d8AB9f43f023496a9DF13B1c1` |
+| **staticMessageIdMultisigIsmFactory** | `0xb6Da6c4eC9C94C22C8f75feF2A45c78F319dC920` |
+| **staticMessageIdWeightedMultisigIsmFactory** | `0xD340b26514c03c62c82a8B06841f4c5cA340d645` |
+| **testRecipient** | `0x836068c6B773d38Ef13b2EEb6B64B2a279bB952a` |
+
+**ISM Relayer & Owner Address:**  
+`0x1950498e95274Dc79Fbca238C2BE53684D69886F`
+
+---
+
+## 🔁 Solver Server
+
+The Solver API validates cross-chain intent deposits and signs or submits transactions:
+
+🌐 [https://solver-server-sgre.vercel.app/solve](https://solver-server-sgre.vercel.app/solve)
+
+Check the [solver-server](https://github.com/your-org/solver-server) repo for logic and test cases.
+
+---
+
+## 🚀 Try It Live
+
+Check out the app frontend:
+👉 [https://disburse.network](https://disburse.network)
+
+Explore the deployed contracts and relayers:
+📂 `contracts/` folder
+
