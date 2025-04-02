@@ -72,7 +72,6 @@ You can verify and explore recent payouts on each destination chain:
 ### CreateRollup Transaction:
 [`0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965`](https://sepolia.arbiscan.io/tx/0xc081e5a3b9e7bff2899634050eb7d58fc96452350f4efb7dd33c41d7ac0a1965)
 
-![CreateRollup image](assets/CreateRollup.png)
 ![image](https://github.com/user-attachments/assets/c69d9f40-979e-4d60-8752-44c2c060ace4)
 
 ---
