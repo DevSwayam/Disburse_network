@@ -181,13 +181,27 @@ Check the `solver-server` repo for logic and test cases.
 - Client Repo: 💻 [https://github.com/vwakesahu/hackathon-client](https://github.com/vwakesahu/hackathon-client)
 - Contracts: 📂 `contracts/`
 - Solver: 🧠 [Solver API](https://solver-server-sgre.vercel.app/solve)
-
+  
 
 ## 📂 Folder Guide
-- `contracts/` → Solidity smart contracts
-- `solver-server/` → Express.js solver backend
-- [`hackathon-client`](https://github.com/vwakesahu/hackathon-client) → Next.js frontend (Disburse App)
+- `contracts/` → Solidity smart contracts  
+- `solver-server/` → Express.js solver backend  
+- [`hackathon-client`](https://github.com/vwakesahu/hackathon-client) → Next.js frontend (Disburse App)  
 - `Nitro + Espresso Rollup config`
+
+### 🧩 Cloning the Full Project with Submodules
+
+To clone the full Disburse Network project along with the `hackathon-client` submodule:
+
+```bash
+git clone --recurse-submodules https://github.com/DevSwayam/Disburse_network.git
+```
+
+If you've already cloned the repo:
+
+```bash
+git submodule update --init --recursive
+```
 
 
 ## 🙌 Team & Credits
