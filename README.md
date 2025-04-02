@@ -184,7 +184,7 @@ Check the `solver-server` repo for logic and test cases.
 ## 📂 Folder Guide
 - `contracts/` → Solidity smart contracts
 - `solver-server/` → Express.js solver backend
-- `rollup/` → Nitro + Espresso Rollup config
+- `Nitro + Espresso Rollup config`
 
 
 ## 🙌 Team & Credits
